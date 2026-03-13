@@ -209,3 +209,39 @@ const themeBtn = document.getElementById("theme-toggle");
 themeBtn.addEventListener("click", () => {
 document.body.classList.toggle("light");
 });
+
+let cropper;
+const image = document.getElementById("preview-image");
+
+const startCrop = document.getElementById("crop-start");
+const applyCrop = document.getElementById("crop-apply");
+
+startCrop.addEventListener("click", () => {
+
+if(cropper){
+cropper.destroy();
+}
+
+cropper = new Cropper(image, {
+aspectRatio: NaN,
+viewMode: 1,
+movable: true,
+zoomable: true,
+scalable: true,
+rotatable: true
+});
+
+});
+
+applyCrop.addEventListener("click", () => {
+
+if(!cropper) return;
+
+const canvas = cropper.getCroppedCanvas();
+
+image.src = canvas.toDataURL();
+
+cropper.destroy();
+cropper = null;
+
+});

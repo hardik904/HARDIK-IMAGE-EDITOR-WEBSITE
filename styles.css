@@ -210,6 +210,11 @@ background:#222;
 color:white;
 }
 
+#crop-btn{
+background:#555;
+color:white;
+}
+
 @media(max-width:500px){
 
 .bottom{
