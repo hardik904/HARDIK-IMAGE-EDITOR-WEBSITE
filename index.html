@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Image Editor</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<main>
+
+<section>
+
+<div class="left">
+
+<div class="top">
+
+<label for="image-input" class="btn">
+Choose Image
+<input type="file" id="image-input" hidden accept="image/*">
+</label>
+
+<button class="btn danger" id="reset-btn">Reset</button>
+
+<button class="btn success" id="download-btn">Download</button>
+
+<button class="btn" id="theme-toggle">Theme</button>
+
+</div>
+
+
+
+<div class="bottom" id="image-area">
+
+<img id="preview-image">
+
+<div class="placeholder">
+
+<i class="ri-image-line"></i>
+<p>Click to upload image</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="right">
+
+<h2>Filters</h2>
+
+<div class="filter">
+<p>Brightness</p>
+<input type="range" id="brightness" min="0" max="200" value="100">
+</div>
+
+<div class="filter">
+<p>Contrast</p>
+<input type="range" id="contrast" min="0" max="200" value="100">
+</div>
+
+<div class="filter">
+<p>Saturation</p>
+<input type="range" id="saturation" min="0" max="200" value="100">
+</div>
+
+<div class="filter">
+<p>Blur</p>
+<input type="range" id="blur" min="0" max="10" value="0">
+</div>
+
+<div class="filter">
+<p>Grayscale</p>
+<input type="range" id="grayscale" min="0" max="100" value="0">
+</div>
+
+<div class="filter">
+<p>Sepia</p>
+<input type="range" id="sepia" min="0" max="100" value="0">
+</div>
+
+<div class="filter">
+<p>Hue Rotate</p>
+<input type="range" id="hue" min="0" max="360" value="0">
+</div>
+
+<div class="filter">
+<p>Invert</p>
+<input type="range" id="invert" min="0" max="100" value="0">
+</div>
+
+
+
+<h2>Quick Filters</h2>
+
+<div class="preset-filters">
+
+<button class="preset" data-filter="vintage">Vintage</button>
+<button class="preset" data-filter="warm">Warm</button>
+<button class="preset" data-filter="cool">Cool</button>
+<button class="preset" data-filter="dramatic">Dramatic</button>
+<button class="preset" data-filter="bw">Black & White</button>
+
+</div>
+
+
+
+<h2>Auto Edit</h2>
+
+<button class="btn success" id="auto-edit">Auto Enhance</button>
+
+
+
+<h2>Transform</h2>
+
+<div class="transform">
+
+<button class="btn" id="rotate-left">Rotate Left</button>
+<button class="btn" id="rotate-right">Rotate Right</button>
+<button class="btn" id="flip-h">Flip H</button>
+<button class="btn" id="flip-v">Flip V</button>
+<button class="btn" id="compare-btn">Before / After</button>
+<button class="btn" id="zoom-in">Zoom +</button>
+<button class="btn" id="zoom-out">Zoom -</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
